@@ -5,3 +5,11 @@
     <h1 class="display-4 text-center">Step 1</h1>
 </div>
 {% endblock %}
+
+{% block content %}
+<form action="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Next</button>
+</form>
+{% endblock %}
