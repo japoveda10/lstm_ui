@@ -23,3 +23,8 @@ form {
   margin: 0 auto; 
   width:250px;
 }
+
+.bodyParagraph {
+  margin-left: 20px;
+  margin-right: 20px;
+}
