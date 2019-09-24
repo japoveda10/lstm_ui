@@ -1,6 +1,6 @@
 #mainJumbotron {
     margin-top: 10px;
-    padding-bottom: 290px;
+    margin-bottom: 10px;
 }
 #page-container {
     position: relative;
@@ -12,6 +12,7 @@
   }
   
   #footer {
+    margin-top: 10px;
     position: absolute;
     bottom: 0;
     width: 100%;
