@@ -43,19 +43,24 @@
     </nav>
     {% endblock %}
 
-    {% block header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
-
-    {% block footer %}
-    <div id="footer" class="card text-white bg-primary mb-3">
-        <div class="card-body">
-            <h5 class="card-title text-center">LSTM Proposed Approach - A learning accurate LSTM models of Business Processes. </h5>
+    <div id="container">
+        <div id="header">
+            {% block header %}
+            {% endblock %}
+        </div>
+        <div id="body">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="clear"></div>
+        <div id="footer" class="card text-white bg-primary mb-3">
+            {% block footer %}
+            <div class="card-body">
+                    <h5 class="card-title text-center">LSTM Proposed Approach - A learning accurate LSTM models of Business Processes. </h5>
+            </div>
+            {% endblock %}
         </div>
     </div>
-    {% endblock %}
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
