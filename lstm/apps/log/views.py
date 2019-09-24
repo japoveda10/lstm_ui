@@ -6,3 +6,9 @@ def index(request):
 
 def step1(request):
     return render(request, 'log/step1.html')
+
+def about(request):
+    return render(request, 'log/about.html')
+
+def contact_us(request):
+    return render(request, 'log/contact_us.html')

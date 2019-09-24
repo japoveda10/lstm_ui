@@ -10,11 +10,11 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}">About</a>
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'about' %}">About<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
@@ -25,20 +25,8 @@
 </nav>
 {% endblock %}
 
-{% block title %}
-{% endblock %}
-
 {% block header %}
-<div id="mainJumbotron" class="jumbotron">
-    <h1 class="display-4 text-center">Welcome!</h1>
-    <p class="lead text-center">This is the UI of our proposed LSTM Approach</p>
-    <hr class="my-4">
-    <p class="text-center">To try it, click on the next button:</p>
-    <p class="lead text-center">
-        <a class="btn btn-primary btn-lg" href="{% url 'step1' %}" role="button">Start</a>
-    </p>
+<div  class="jumbotron">
+    <h1 class="display-4 text-center">About</h1>
 </div>
-{% endblock %}
-
-{% block content %}
 {% endblock %}

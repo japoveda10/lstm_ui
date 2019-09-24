@@ -1,7 +1,9 @@
 from django.urls import path  
-from .views import index, step1
+from .views import index, step1, about, contact_us
 
 urlpatterns = [
-    path('', index, name='log'),
-    path('step1/', step1, name='step1')
+    path('', index, name='home'),
+    path('step1/', step1, name='step1'),
+    path('about/', about, name='about'),
+    path('contact_us/', contact_us, name='contact_us'),
 ]
