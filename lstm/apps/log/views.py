@@ -3,9 +3,6 @@ from django.http import HttpResponse
 from apps.log.forms import SelectLogForm
 
 def index(request):
-    return render(request, 'log/index.html')
-
-def step1(request):
     if request.method == 'POST':
        form = SelectLogForm(request.POST)
        if form.is_valid():
@@ -14,7 +11,7 @@ def step1(request):
     else:
         form = SelectLogForm()
 
-    return render(request, 'log/step1.html', {'form':form})
+    return render(request, 'log/index.html', {'form':form})
 
 def about(request):
     return render(request, 'log/about.html')

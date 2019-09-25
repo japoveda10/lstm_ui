@@ -32,13 +32,14 @@
 <div id="mainJumbotron" class="jumbotron">
     <h1 class="display-4 text-center">Welcome!</h1>
     <p class="lead text-center">This is the UI of our proposed LSTM Approach</p>
-    <hr class="my-4">
-    <p class="text-center">To try it, click on the next button:</p>
-    <p class="lead text-center">
-        <a class="btn btn-primary btn-lg" href="{% url 'step1' %}" role="button">Start</a>
-    </p>
 </div>
 {% endblock %}
 
 {% block content %}
+<p id="instructions" class="text-center">Select the settings you want:</p>
+<form action="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Next</button>
+</form>
 {% endblock %}

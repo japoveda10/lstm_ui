@@ -1,6 +1,7 @@
 form { 
-  margin: 0 auto; 
-  width:250px;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 250px;
 }
 
 iframe {
@@ -16,20 +17,24 @@ iframe {
   margin-right: 20px;
 }
 
+.clear { clear: both; height: 60px; }
+
 #mainJumbotron {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.clear { clear: both; height: 60px; }
+#aboutJumbotron {
+  padding: 20px;
+}
+
+#instructions {
+  padding-top: 20px;
+}
 
 #footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 60px;
-}
-
-#aboutJumbotron {
-  padding: 20px;
 }
