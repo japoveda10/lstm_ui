@@ -21,4 +21,4 @@ class SelectLogForm(forms.Form):
         (LOG_8, u"BPI 2015-4"),
         (LOG_9, u"BPI 2015-5"),
     )
-    logs = forms.ChoiceField(choices=LOG_CHOICES)
+    log = forms.ChoiceField(choices=LOG_CHOICES)

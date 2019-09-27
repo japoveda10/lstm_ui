@@ -36,7 +36,7 @@
 {% endblock %}
 
 {% block content %}
-<p id="instructions" class="text-center">Select the settings you want:</p>
+<p id="instructions" class="text-center">Select the settings you would like:</p>
 <form action="post">
     {% csrf_token %}
     {{ form.as_p }}
