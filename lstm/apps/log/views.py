@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from apps.log.forms import SelectLogForm
+from rest_framework import viewsets
+from .models import EventLog
+from .serializers import EventLogSerializer
 
 def index(request):
     if request.method == 'POST':
@@ -18,3 +21,7 @@ def about(request):
 
 def contact_us(request):
     return render(request, 'log/contact_us.html')
+
+class EventLogView(viewsets.ModelViewSet):
+    queryset = EventLog.objects.all()
+    serializer_class = EventLogSerializer
