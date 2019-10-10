@@ -6,14 +6,11 @@ from .models import EventLog
 from .serializers import EventLogSerializer
 
 def index(request):
-    if request.method == 'POST':
-       form = SelectLogForm(request.POST)
-       if form.is_valid():
-           form.save()
-       return redirect('log:index')
-    else:
-        form = SelectLogForm()
-
+    if request.GET.get('Execute All'):
+        return render(request, 'log/results.html')
+    elif request.GET.get('Predict'):
+        return render(request, 'log/predict.html')
+    form = SelectLogForm()
     return render(request, 'log/index.html', {'form':form})
 
 def about(request):

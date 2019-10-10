@@ -37,6 +37,15 @@
 
 {% block content %}
 <p id="instructions" class="text-center">Select the settings you would like:</p>
+
+<form method="GET">
+    {{ form }}
+    <input type="submit" value="Execute All" name="Execute All"/>
+    <input type="submit" value="Predict" name="Predict"/>
+</form>
+
+
+
 <form action="post">
     {% csrf_token %}
     {{ form.as_p }}
