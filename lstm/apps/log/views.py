@@ -9,7 +9,8 @@ def index(request):
     if request.GET.get('Execute All'):
         return render(request, 'log/results.html')
     elif request.GET.get('Predict'):
-        return render(request, 'log/predict.html')
+        selectedLog = request.GET['log']
+        return render(request, 'log/predict.html', { "selectedLog": selectedLog })
     form = SelectLogForm()
     return render(request, 'log/index.html', {'form':form})
 
