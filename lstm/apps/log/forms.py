@@ -22,3 +22,21 @@ class SelectLogForm(forms.Form):
         (LOG_9, u"BPI 2015-5"),
     )
     log = forms.ChoiceField(choices=LOG_CHOICES)
+
+class SelectTrainedModelForm(forms.Form):
+    TRAINED_MODEL_1 = 'Trained Model 1'
+    TRAINED_MODEL_2 = 'Trained Model 2'
+    TRAINED_MODEL_CHOICES = (
+        (TRAINED_MODEL_1, u"Trained Model 1"),
+        (TRAINED_MODEL_2, u"Trained Model 2"),
+    )
+    trained_model = forms.ChoiceField(choices=TRAINED_MODEL_CHOICES)
+
+class SelectPostProcessingTechniqueForm(forms.Form):
+    POSTPROCESSING_TECHNIQUE_1 = 'Arg. Max'
+    POSTPROCESSING_TECHNIQUE_2 = 'Random Choice'
+    POSTPROCESSING_TECHNIQUE_CHOICES = (
+        (POSTPROCESSING_TECHNIQUE_1, u"Arg. Max"),
+        (POSTPROCESSING_TECHNIQUE_2, u"Random Choice"),
+    )
+    post_processing_technique = forms.ChoiceField(choices=POSTPROCESSING_TECHNIQUE_CHOICES)
