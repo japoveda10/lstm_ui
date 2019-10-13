@@ -12,6 +12,11 @@ iframe {
   display: block;
 }
 
+label {
+  padding-right: 10px;
+  font-weight: bold;
+}
+
 .bodyParagraph {
   margin-left: 20px;
   margin-right: 20px;
@@ -37,4 +42,8 @@ iframe {
   bottom: 0;
   width: 100%;
   height: 60px;
+}
+
+#options {
+  padding-bottom: 20px;
 }

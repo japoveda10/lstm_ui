@@ -37,19 +37,25 @@
 {% block content %}
 <p id="instructions" class="text-center">Select the settings you would like to define:</p>
 
-<div id="options" class="text-center">
-    <p><b>Selected log: </b>{{ selectedLog }}</p>
-    {{ trained_models_form }}
-    <p></p>
-    {{ postprocessing_technique_form }}
-    <p></p>
-    <input type="submit" value="Show Results" name="Show Results"/>
+<div id="options" class="container text-center">
+    <div class="row">
+        <div class="col-sm">
+            <p><b>Selected log: </b>{{ selectedLog }}</p>
+        </div>
+        <div class="col-sm">
+            {{ trained_models_form }}
+        </div>
+        <div class="col-sm">
+            {{ postprocessing_technique_form }}
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <input type="submit" value="Show Results" name="Show Results"/>
+    </div>
 </div>
 
-<p></p>
-
 <div id="options" class="text-center">
-    <p><b>Running Cases</b></p>
+    <h3><b>Running Cases</b></h3>
 </div>
 
 {% endblock %}
