@@ -24,6 +24,13 @@ def about(request):
 def contact_us(request):
     return render(request, 'log/contact_us.html')
 
+def predict(request):
+    if request.GET.get('Show Results'):
+        return render(request, 'log/results.html')
+
+def results(request):
+    return render(request, 'log/results.html')
+
 def get_data(request):
     data = {
         'log_data': [41, 26, 57, 47, 49, 40, 67, 68, 24, 26],
