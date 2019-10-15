@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from apps.log.forms import SelectLogForm
 from apps.log.forms import SelectTrainedModelForm
 from apps.log.forms import SelectPostProcessingTechniqueForm
@@ -23,6 +23,14 @@ def about(request):
 
 def contact_us(request):
     return render(request, 'log/contact_us.html')
+
+def get_data(request):
+    data = {
+        'log_data': [41, 26, 57, 47, 49, 40, 67, 68, 24, 26],
+        'label_data': ['2', '3', '4', '5', '6', '7'],
+    }
+
+    return JsonResponse(data)
 
 class EventLogView(viewsets.ModelViewSet):
     queryset = EventLog.objects.all()

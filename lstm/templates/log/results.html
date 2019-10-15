@@ -36,4 +36,74 @@
 
 {% block content %}
 <p id="instructions" class="text-center">These are the results:</p>
+<div style="margin-top:30px;margin-bottom: 30px">
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <canvas id="genderChart" width="1000"></canvas>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script>
+    $.ajax({
+        method:'GET',
+        url:'/results/',
+        success:function(data){
+            console.log(data);
+            new Chart(document.getElementById("genderChart"), {
+                type: 'bar',
+                data: {
+                    labels: data.label_data,
+                    datasets: [
+                        {
+                            label: "Our Approach",
+                            backgroundColor: "rgba(62, 149, 205, 0.5)",
+                            borderColor : "rgba(62, 149, 205, 1)",
+                            pointBackgroundColor: "rgba(62, 149, 205, 1)",
+                            data: data.log_data,
+                        },
+                    ]
+                },
+                options: {
+                    legend: {
+                        labels: {
+                            fontSize: 18
+                        }
+                    },
+                    title: {
+                        display : true,
+                        text : "Results of Remaining Cycle-Time MAE in Days",
+                        fontSize : 22.0
+                     },
+                    scales: {
+                        yAxes: [{
+                            ticks:{
+                                beginAtZero: true,
+                                fontSize:15.0,
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'MAE (days)',
+                                fontSize :20.0,
+                            }
+                        }],
+                        xAxes: [{
+                            ticks:{
+                              fontSize: 15.0,
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Prefix Size',
+                                fontSize : 20.0,
+                            }
+                        }]
+                      },
+                    responsive: false,
+                }
+            });
+        },
+        error:function(data){
+            console.log('Error!');
+        }
+    });
+</script>
 {% endblock %}
