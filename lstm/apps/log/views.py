@@ -15,6 +15,9 @@ def index(request):
         trainedModelForm = SelectTrainedModelForm()
         postProcessingTechniqueForm = SelectPostProcessingTechniqueForm()
         return render(request, 'log/predict.html', { "selectedLog": selectedLog, "trained_models_form": trainedModelForm, "postprocessing_technique_form": postProcessingTechniqueForm })
+    
+    elif request.GET.get('Show Results'):
+        return render(request, 'log/results.html')
     form = SelectLogForm()
     return render(request, 'log/index.html', {'form':form})
 
@@ -23,10 +26,6 @@ def about(request):
 
 def contact_us(request):
     return render(request, 'log/contact_us.html')
-
-def predict(request):
-    if request.GET.get('Show Results'):
-        return render(request, 'log/results.html')
 
 def results(request):
     return render(request, 'log/results.html')
