@@ -10,8 +10,8 @@ import json
 
 json_data = open('./static/prefixes.json')   
 data1 = json.load(json_data) # deserialize
-json_items = json.dumps(data1['collection']['items'], indent=4)
-print(json_items)
+data2 = json.dumps(data1)
+json_items = data1['collection']['items']
 json_data.close()
 
 def index(request):
