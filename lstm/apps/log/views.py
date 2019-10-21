@@ -6,6 +6,13 @@ from apps.log.forms import SelectPostProcessingTechniqueForm
 from rest_framework import viewsets
 from .models import EventLog
 from .serializers import EventLogSerializer
+import json
+
+json_data = open('./static/prefixes.json')   
+data1 = json.load(json_data) # deserialize
+data2 = json.dumps(data1) # json formatted string
+
+json_data.close()
 
 def index(request):
     if request.GET.get('Execute All'):
@@ -14,7 +21,7 @@ def index(request):
         selectedLog = request.GET['log']
         trainedModelForm = SelectTrainedModelForm()
         postProcessingTechniqueForm = SelectPostProcessingTechniqueForm()
-        return render(request, 'log/predict.html', { "selectedLog": selectedLog, "trained_models_form": trainedModelForm, "postprocessing_technique_form": postProcessingTechniqueForm })
+        return render(request, 'log/predict.html', { "selectedLog": selectedLog, "trained_models_form": trainedModelForm, "postprocessing_technique_form": postProcessingTechniqueForm, 'data': data2 })
     
     elif request.GET.get('Show Results'):
         return render(request, 'log/results.html')

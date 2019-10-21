@@ -1,0 +1,59 @@
+{"collection": {
+    "version": "1.0",
+    "href": "https://localhost/prefixes/",
+    "links" : [
+        {"rel": "home", "type" : "GET", "href" : "http://localhost/eventlogs"}
+    ],	
+    "items" : [
+      {
+        "href" : "http://localhost/prefixes/1",
+        "data" : [ 
+          {"tast_num" : 0, "task" : "start"},
+          {"tast_num" : 1, "task" : "Assign seriousness"},
+          {"tast_num" : 12, "task" : "Take in charge ticket"}
+        ],
+        "links" : [
+          {"rel": "pred_next", "type" : "GET", "href" : "http://localhost/pred_next/1"},
+          {"rel": "pred_suffix", "type" : "GET", "href" : "http://localhost/pred_suffix/1"}
+        ]
+      },
+      {
+        "href" : "http://localhost/prefixes/2",
+        "data" : [ 
+          {"tast_num" : 0, "task" : "start"},
+          {"tast_num" : 1, "task" : "Assign seriousness"}
+        ],
+        "_links" : [
+          {"rel": "pred_next", "type" : "GET", "href" : "http://localhost/pred_next/2"},
+          {"rel": "pred_suffix", "type" : "GET", "href" : "http://localhost/pred_suffix/2"}
+        ]
+      },
+      {
+        "href" : "http://localhost/prefixes/3",
+        "data" : [ 
+          {"tast_num" : 0, "task" : "start"},
+          {"tast_num" : 1, "task" : "Assign seriousness"},
+          {"tast_num" : 12, "task" : "Take in charge ticket"},
+          {"tast_num" : 8, "task" : "Require upgrade"}
+        ],
+        "_links" : [
+          {"rel": "pred_next", "type" : "GET", "href" : "http://localhost/pred_next/3"},
+          {"rel": "pred_suffix", "type" : "GET", "href" : "http://localhost/pred_suffix/3"}
+        ]
+      },
+      {
+        "href" : "http://localhost/prefixes/4",
+        "data" : [ 
+          {"tast_num" : 0, "task" : "start"},
+          {"tast_num" : 1, "task" : "Assign seriousness"},
+          {"tast_num" : 12, "task" : "Take in charge ticket"},
+          {"tast_num" : 14, "task" : "Wait"}
+        ],
+        "links" : [
+          {"rel": "pred_next", "type" : "GET", "href" : "http://localhost/pred_next/4"},
+          {"rel": "pred_suffix", "type" : "GET", "href" : "http://localhost/pred_suffix/4"}
+        ]
+      }     
+    ]
+	}
+}
