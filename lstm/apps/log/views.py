@@ -10,7 +10,8 @@ import json
 
 json_data = open('./static/prefixes.json')   
 data1 = json.load(json_data) # deserialize
-data2 = json.dumps(data1) # json formatted string
+json_items = json.dumps(data1['collection']['items'], indent=4)
+print(json_items)
 json_data.close()
 
 def index(request):
@@ -20,7 +21,7 @@ def index(request):
         selectedLog = request.GET['log']
         trainedModelForm = SelectTrainedModelForm()
         postProcessingTechniqueForm = SelectPostProcessingTechniqueForm()
-        return render(request, 'log/predict.html', { "selectedLog": selectedLog, "trained_models_form": trainedModelForm, "postprocessing_technique_form": postProcessingTechniqueForm, 'data': data2 })
+        return render(request, 'log/predict.html', { "selectedLog": selectedLog, "trained_models_form": trainedModelForm, "postprocessing_technique_form": postProcessingTechniqueForm, 'data': json_items })
     
     elif request.GET.get('Show Results'):
         return render(request, 'log/results.html')
