@@ -11,7 +11,6 @@ import json
 json_data = open('./static/prefixes.json')   
 data1 = json.load(json_data) # deserialize
 data2 = json.dumps(data1) # json formatted string
-
 json_data.close()
 
 def index(request):

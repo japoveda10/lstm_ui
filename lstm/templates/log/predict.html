@@ -60,7 +60,9 @@
 
 <div id="runningCases" class="text-center">
     <h3><b>Running Cases</b></h3>
-    {{ data }}
+    {% for item in data %}
+    {{ item }}
+    {% endfor %}
     <div id="runningCaseButtons" class="text-center">
         <input type="submit" value="Next Event" name="Next Event" />
         <input type="submit" value="Show Suffix" name="Show Suffix" />
