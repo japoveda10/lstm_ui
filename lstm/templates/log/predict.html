@@ -48,8 +48,12 @@
 </div>
 
 <div id="runningCases" class="text-center">
-    <h3><b>Running Cases</b></h3>
+    <div id="runningCasesTitle">
+            <h3><b>Running Cases</b></h3>
+    </div>
+    
     {% for item in data %}
+    <hr>
 		<div class="contenedor">
 			{% for tarea in item.data %}
 				<div class="contenido">
@@ -61,15 +65,15 @@
 					</div>
 				{% endif %}
 			{% endfor %}
-		</div>
+        </div>
+        <p></p>
+        <div class="text-center">
+            <input type="submit" name="Next Event" value="Next Event" class="btn btn-primary active" />
+            <input type="submit" name="Show Suffix" value="Show Suffix" class="btn btn-primary active" />
+        </div>
+        <p></p>
+        <hr>
     {% endfor %}
-    <hr>
-
-
-    <div id="runningCaseButtons" class="text-center">
-		<input type="submit" name="Next Event" value="Next Event" class="btn btn-primary active" />
-		<input type="submit" name="Show Suffix" value="Show Suffix" class="btn btn-primary active" />
-    </div>
 </div>
 
 {% endblock %}
