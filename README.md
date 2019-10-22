@@ -4,9 +4,13 @@ Welcome! This is the [LSTM Proposed Approach](https://link.springer.com/chapter/
 
 ![LSTM Proposed Approach Main Page](https://raw.githubusercontent.com/japoveda10/lstm_ui/master/lstm/IMAGE.png)
 
+## What is it?
+
+This is the User Interface of an [GenerativeLSTM](https://github.com/AdaptiveBProcess/GenerativeLSTM), an application that builds and uses generative models from event logs in XES format using LSTM neural networks.
+
 ## How is it built?
 
-The UI is built using a Python framework called [Django](https://www.djangoproject.com/). This project also uses [Chart.js](https://www.chartjs.org/) and [bpmn-js](https://bpmn.io/toolkit/bpmn-js/)
+The UI is built using a Python framework called [Django](https://www.djangoproject.com/). This project also uses [Chart.js](https://www.chartjs.org/).
 
 ## How can I run it?
 
@@ -18,7 +22,7 @@ The UI is built using a Python framework called [Django](https://www.djangoproje
    
 2. Request the ```settings.py``` file to japoveda10 and then add it to the /lstm_ui/lstm/lstm/ directory
 3. Install [Python](https://www.python.org/downloads/)
-4. Create a **virtual environment** to manage the project's dependencies. If you are using **Windows**, follow the [instructions](https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/). If you are using **macOS**, follow the [instructions](https://sourabhbajaj.com/mac-setup/Python/virtualenv.html).
+4. Create a **virtual environment** to manage the project's dependencies. If you are using **Windows**, follow the instructions available [here](https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/). If you are using **macOS**, follow the instructions available [here](https://sourabhbajaj.com/mac-setup/Python/virtualenv.html). Note that the virtual environment instructions for Windows and macOS were not written by us (we are referencing and external source of information).
 4. Install **Django** using pip:
 
    ```
@@ -54,6 +58,10 @@ The UI is built using a Python framework called [Django](https://www.djangoproje
    ```
    https://127.0.0.1:8000
    ```
+
+## Questions and Suggestions
+
+If you have questions or suggestions about this project, please contact [japoveda10](https://github.com/japoveda10)
 
 ## Author
 
