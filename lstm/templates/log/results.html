@@ -41,7 +41,7 @@
 </div>
 <div style="margin-top:30px;margin-bottom: 30px">
     <div style="display: flex;justify-content: center;align-items: center;">
-        <canvas id="genderChart" width="1000"></canvas>
+        <canvas id="resultsChart" width="1000"></canvas>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -52,7 +52,7 @@
         url:'/results/',
         success:function(data){
             console.log(data);
-            new Chart(document.getElementById("genderChart"), {
+            new Chart(document.getElementById("resultsChart"), {
                 type: 'bar',
                 data: {
                     labels: data.label_data,
