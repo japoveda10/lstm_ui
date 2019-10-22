@@ -25,6 +25,7 @@ The UI is built using a Python framework called [Django](https://www.djangoproje
 4. Create a **virtual environment** to manage the project's dependencies. If you are using **Windows**, follow the instructions available [here](https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/). If you are using **macOS**, follow the instructions available [here](https://sourabhbajaj.com/mac-setup/Python/virtualenv.html). 
 
 **Important:** the virtual environment setup instructions for Windows and macOS were not written by us (we are linking you to an external information source).
+
 4. Install **Django** using pip:
 
    ```
