@@ -10,7 +10,7 @@ This is the User Interface of an [GenerativeLSTM](https://github.com/AdaptiveBPr
 
 ## How is it built?
 
-The UI is built using a Python framework called [Django](https://www.djangoproject.com/). This project also uses [Chart.js](https://www.chartjs.org/).
+The UI is built using a Python framework called [Django](https://www.djangoproject.com/). This Python framework follows the **Model-Template-View** pattern. This project also uses [Chart.js](https://www.chartjs.org/).
 
 ## How can I run it?
 
@@ -22,7 +22,9 @@ The UI is built using a Python framework called [Django](https://www.djangoproje
    
 2. Request the ```settings.py``` file to japoveda10 and then add it to the /lstm_ui/lstm/lstm/ directory
 3. Install [Python](https://www.python.org/downloads/)
-4. Create a **virtual environment** to manage the project's dependencies. If you are using **Windows**, follow the instructions available [here](https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/). If you are using **macOS**, follow the instructions available [here](https://sourabhbajaj.com/mac-setup/Python/virtualenv.html). Note that the virtual environment instructions for Windows and macOS were not written by us (we are referencing and external source of information).
+4. Create a **virtual environment** to manage the project's dependencies. If you are using **Windows**, follow the instructions available [here](https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/). If you are using **macOS**, follow the instructions available [here](https://sourabhbajaj.com/mac-setup/Python/virtualenv.html). 
+
+**Important:** the virtual environment setup instructions for Windows and macOS were not written by us (we are linking you to an external information source).
 4. Install **Django** using pip:
 
    ```
