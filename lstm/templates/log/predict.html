@@ -1,10 +1,7 @@
-{% extends 'base/base.html' %}
-
-{% block navbar %}
+{% extends 'base/base.html' %} {% block navbar %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="{% url 'home' %}">LSTM Proposed Approach</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -23,18 +20,11 @@
         </ul>
     </div>
 </nav>
-{% endblock %}
-
-{% block title %}
-{% endblock %}
-
-{% block header %}
+{% endblock %} {% block title %} {% endblock %} {% block header %}
 <div id="mainJumbotron" class="jumbotron">
     <h1 class="display-4 text-center">Predict</h1>
 </div>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <p id="instructions" class="text-center">Select the settings you would like to define:</p>
 
 <div id="options" class="container text-center">
@@ -51,9 +41,8 @@
     </div>
     <div class="row justify-content-center">
         <form method="GET">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Show Results" name="Show Results" />
+            {% csrf_token %} {{ form }}
+            <input type="submit" value="Show Results" name="Show Results" class="btn btn-primary active" >
         </form>
     </div>
 </div>
@@ -61,13 +50,26 @@
 <div id="runningCases" class="text-center">
     <h3><b>Running Cases</b></h3>
     {% for item in data %}
-    <p>{{ item }}</p>
+		<div class="contenedor">
+			{% for tarea in item.data %}
+				<div class="contenido">
+					{{tarea.task}}
+				</div>
+				{% if forloop.counter < item.data|length %} 
+					<div class="arrow-predict">
+						<img id="arrow" src="https://img.icons8.com/metro/452/arrow.png">
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
     {% endfor %}
+    <hr>
+
+
     <div id="runningCaseButtons" class="text-center">
-        <input type="submit" value="Next Event" name="Next Event" />
-        <input type="submit" value="Show Suffix" name="Show Suffix" />
+		<input type="submit" name="Next Event" value="Next Event" class="btn btn-primary active" />
+		<input type="submit" name="Show Suffix" value="Show Suffix" class="btn btn-primary active" />
     </div>
 </div>
 
 {% endblock %}
-
