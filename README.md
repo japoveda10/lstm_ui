@@ -10,7 +10,7 @@ This is the User Interface of an [GenerativeLSTM](https://github.com/AdaptiveBPr
 
 ## How is it built?
 
-The UI is built using a Python framework called [Django](https://www.djangoproject.com/). This Python framework follows the **Model-Template-View** pattern. This project also uses [Chart.js](https://www.chartjs.org/).
+The UI is built using a Python framework called [Django](https://www.djangoproject.com/). This Python framework follows the **Model-Template-View** pattern. This project also uses [Chart.js](https://www.chartjs.org/) and [ProcessFlow](https://github.com/GabrielchenCN/ProcessFlow).
 
 ## How can I run it?
 
