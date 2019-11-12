@@ -14,5 +14,5 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('contact_us/', contact_us, name='contact_us'),
     path('api/', include(router.urls)),
-    path('results/', get_data, name="results")
+    path('results/', get_data, name="results"),
 ]

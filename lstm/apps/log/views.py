@@ -6,7 +6,7 @@ from apps.log.forms import SelectPostProcessingTechniqueForm
 from apps.log.forms import SelectRunningCaseForm
 from rest_framework import viewsets
 from .models import EventLog, RunningCase
-from .serializers import EventLogSerializer, RunningCaseSerializer
+from apps.log.serializers import EventLogSerializer, RunningCaseSerializer
 import json
 
 json_data = open('./static/prefixes.json')   
