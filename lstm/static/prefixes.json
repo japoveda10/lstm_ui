@@ -8,13 +8,12 @@
       {
         "href" : "http://localhost/prefixes/1",
         "data" : [ 
-          {"tast_num" : 0, "task" : "start"},
-          {"tast_num" : 1, "task" : "Assign seriousness"},
+          {"task_num" : 0, "task" : "start" },
+          {"tast_num" : 1, "task" : "Assign seriousness" },
           {"tast_num" : 12, "task" : "Take in charge ticket"}
         ],
         "links" : [
-          {"rel": "pred_next", "type" : "GET", "href" : "http://localhost/pred_next/1"},
-          {"rel": "pred_suffix", "type" : "GET", "href" : "http://localhost/pred_suffix/1"}
+          {"rel": "get_assignment", "type" : "GET", "href" : "http://localhost/get_assignment/1"}
         ]
       },
       {

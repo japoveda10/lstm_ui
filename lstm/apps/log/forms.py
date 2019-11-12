@@ -40,3 +40,16 @@ class SelectPostProcessingTechniqueForm(forms.Form):
         (POSTPROCESSING_TECHNIQUE_2, u"Random Choice"),
     )
     post_processing_technique = forms.ChoiceField(choices=POSTPROCESSING_TECHNIQUE_CHOICES)
+
+class SelectRunningCaseForm(forms.Form):
+    RUNNING_CASE_1 = 'Running Case 1'
+    RUNNING_CASE_2 = 'Running Case 2'
+    RUNNING_CASE_3 = 'Running Case 3'
+    RUNNING_CASE_4 = 'Running Case 4'
+    RUNNING_CASE_CHOICES = (
+        (RUNNING_CASE_1, u"Running Case 1"),
+        (RUNNING_CASE_2, u"Running Case 2"),
+        (RUNNING_CASE_3, u"Running Case 3"),
+        (RUNNING_CASE_4, u"Running Case 4"),
+    )
+    running_case = forms.ChoiceField(choices=RUNNING_CASE_CHOICES)

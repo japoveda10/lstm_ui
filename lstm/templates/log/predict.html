@@ -51,6 +51,13 @@
     <div id="runningCasesTitle">
         <h3><b>Running Cases</b></h3>
     </div>
+    <div class="row justify-content-center">
+        <form method="GET">
+            {% csrf_token %} {{ running_cases_form }}
+            <p></p>
+            <input class="buttons" type="submit" value="Update" name="Update" >
+        </form>
+    </div>
     
     {% for item in data %}
     <hr>
@@ -74,6 +81,8 @@
         <p></p>
         <hr>
     {% endfor %}
+
+    
 </div>
 
 {% endblock %}

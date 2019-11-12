@@ -4,8 +4,11 @@ from . import views
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register('eventlogs', views.EventLogView)
+router.register('eventlogs', views.EventLogViewSet)
+router.register('runningcases', views.RunningCaseViewSet)
 
+# Wires up API using automatic URL routing
+# Login URLs are included for browsable API
 urlpatterns = [
     path('', index, name='home'),
     path('about/', about, name='about'),
