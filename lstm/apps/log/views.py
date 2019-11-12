@@ -37,7 +37,17 @@ def contact_us(request):
     return render(request, 'log/contact_us.html')
 
 def test(request):
-    return render(request, 'log/test.html')
+    if request.GET.get('Predict Next Event'):
+        # Show one more event
+        # Add node
+        # Add link
+        print("Next Event")
+    elif request.GET.get('Predict All'):
+        # Show all events
+        print("Predict All")
+    
+    runningCasesForm = SelectRunningCaseForm()
+    return render(request, 'log/test.html', { "select_running_case_form": runningCasesForm })
 
 def results(request):
     return render(request, 'log/results.html')

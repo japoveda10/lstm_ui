@@ -102,3 +102,7 @@ label {
 #runningCasesTitle {
   padding-bottom: 10px;
 }
+
+#selectRunningCaseDiv {
+  padding-top: 20px;
+}

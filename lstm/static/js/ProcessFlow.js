@@ -1,6 +1,6 @@
 class ProcessFlow {
     constructor({
-        height = 500,
+        height = 300,
         width = "100%",
         data,
         enableZoom = true,

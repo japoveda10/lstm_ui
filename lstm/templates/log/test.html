@@ -36,7 +36,18 @@
 {% block content %}
 <h1 class="text-center">Running Cases</h1>
 
+<div id="selectRunningCaseDiv" class="container text-center">
+    {{ select_running_case_form }}
+</div>
+
 <div id="runningCasesCanvas"></div>
+
+<div class="row justify-content-center">
+    <form method="GET">
+        <input class="buttons" type="submit" value="Predict Next Event" name="Predict Next Event" >
+        <input class="buttons" type="submit" value="Predict All" name="Predict All" >
+    </form>
+</div>
 
 <script>
     const rw = 100,
