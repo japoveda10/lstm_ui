@@ -36,6 +36,9 @@ def about(request):
 def contact_us(request):
     return render(request, 'log/contact_us.html')
 
+def test(request):
+    return render(request, 'log/test.html')
+
 def results(request):
     return render(request, 'log/results.html')
 

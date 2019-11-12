@@ -1,0 +1,172 @@
+{% extends 'base/base.html' %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="{% url 'home' %}">LSTM Proposed Approach</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'about' %}">About<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'test' %}">Test</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+
+{% block header %}
+<div id="aboutJumbotron" class="jumbotron">
+    <h1 class="display-4 text-center">Test</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Running Cases</h1>
+
+<div id="runningCasesCanvas"></div>
+
+<script>
+    const rw = 100,
+          rh = 30,
+          dw = 30,
+          dh = 30;
+    var nodesData = [{
+        "id": 1,
+        "text": "start",
+        "ip": "1.1.1.1",
+        "r": 20,
+        "x": 50,
+        "y": 100,
+        "colorFont": "#2C951C",
+        "colorBg": "#e2f1e0",
+        "colorBorder": "#2C951C",
+        "type": "circle"
+    }, {
+        "id": 2,
+        "text": "Assign seriousness",
+        "ip": "1.1.1.2",
+        "rx":15,
+        "ry":15,
+        "x": 200,
+        "y": 100,
+        "rw": rw,
+        "rh": rh,
+        "type": "rect"
+    }, {
+        "id": 3,
+        "text": "Take in charge ticket",
+        "ip": "1.1.1.4",
+        "x": 350,
+        "y": 100,
+        "rx":15,
+        "ry":15,
+        "rw": rw,
+        "rh": rh,
+        "type": "rect"
+    }, {
+        "id": 4,
+        "text": "Require upgrade",
+        "ip": "1.1.1.4",
+        "x": 500,
+        "y": 100,
+        "rx":15,
+        "ry":15,
+        "rw": rw,
+        "rh": rh,
+        "type": "rect"
+    }, {
+        "id": 5,
+        "text": "End",
+        "ip": "1.1.1.4",
+        "r": 20,
+        "x": 650,
+        "y": 100,
+        "type": "circle",
+        "colorFont": "#C70001",
+        "colorBg": "#f5e1e1",
+        "colorBorder": "#C70001",
+    }];
+    var links = [{
+        "source": 1,
+        "target": 2
+    }, {
+        "source": 2,
+        "target": 3
+    }, {
+        "source": 3,
+        "target": 4
+    }, {
+        "source": 4,
+        "target": 5
+    }];
+    
+    var markerData = [{
+        type: "circle",
+        viewbox: "-5 -5 10 10",
+        path: "M 0,0 m -5,-5 L 5,0 L -5,5 Z",
+        color: "black",
+        markerWidth: "10",
+        markerHeight: "10",
+        refX: "25",
+        refY: "0",
+        orient: "auto",
+    }, {
+        type: "rect",
+        viewbox: "-5 -5 10 10",
+        path: "M 0,0 m -5,-5 L 5,0 L -5,5 Z",
+        color: "black",
+        markerWidth: "10",
+        markerHeight: "10",
+        refY: "0",
+        orient: "auto",
+    }, {
+        type: "diamond",
+        viewbox: "-5 -5 10 10",
+        path: "M 0,0 m -5,-5 L 5,0 L -5,5 Z",
+        color: "black",
+        markerWidth: "10",
+        markerHeight: "10",
+        refX: "20",
+        refY: "0",
+        orient: "auto",
+    }];
+    
+    links.some(function(v, i) {
+        nodesData.some(function(w, j) {
+            if (v.source == w.id) {
+                v.source = w;
+            }
+            if (v.target == w.id) {
+                v.target = w;
+            }
+        });
+        v.index = ++i;
+    });
+    
+    links.some(function(v, i) {
+        markerData.some(function(w, j) {
+            if (v.target.type === w.type) {
+                v.marker = w;
+            }
+        });
+    });
+        
+    console.log(nodesData);
+    console.log(links);
+    let oPF = new ProcessFlow({data:{links:links,nodes:nodesData}});
+    oPF.draw();
+</script>
+{% endblock %}
