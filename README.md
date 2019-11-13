@@ -1,4 +1,4 @@
-# LSTM Proposed Approach UI
+# LSTM Proposed Approach Django UI
 
 Welcome! This is the [LSTM Proposed Approach](https://link.springer.com/chapter/10.1007/978-3-030-26619-6_19) UI
 
