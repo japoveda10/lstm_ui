@@ -26,7 +26,7 @@ The UI is built using a Python framework called [Django](https://www.djangoproje
 
 **Important:** the virtual environment setup instructions for Windows and macOS were not written by us (we are linking you to an external information source).
 
-4. Install **Django** using pip:
+4. Install **Django** using pip (make sure you have created and activated a virtual environment for this project):
 
    ```
    $ pip install django
@@ -40,14 +40,6 @@ The UI is built using a Python framework called [Django](https://www.djangoproje
    
    ```
    $ pip install psycopg2
-   ```
-   
-   ```
-   $ pip install pytz
-   ```
-   
-   ```
-   $ pip install sqlparse
    ```
 
 4. Execute the following command:
