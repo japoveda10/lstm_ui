@@ -62,9 +62,9 @@ The UI is built using a Python framework called [Django](https://www.djangoproje
 
 10. Open your web browser and go to:
 
-   ```
-   https://127.0.0.1:8000
-   ```
+      ```
+      https://127.0.0.1:8000
+      ```
 
 ## Questions and Suggestions
 
