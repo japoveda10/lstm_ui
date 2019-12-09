@@ -9,6 +9,12 @@ from .models import EventLog, RunningCase
 from apps.log.serializers import EventLogSerializer, RunningCaseSerializer
 import json
 
+json_data = open('./static/prefixes.json')   
+data1 = json.load(json_data) # deserialize
+data2 = json.dumps(data1)
+json_items = data1['collection']['items']
+json_data.close()
+
 def index(request):
     if request.GET.get('Execute All'):
         return render(request, 'log/results.html')
