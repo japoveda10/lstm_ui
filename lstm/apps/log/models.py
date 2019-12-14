@@ -1,5 +1,20 @@
+#------------------------------------------------------------------------------
+# LSTM UI Django Project
+# By japoveda10
+# models.py
+# This file has classes that represent models
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+# Imports
+#------------------------------------------------------------------------------
 from django.db import models
 
+#------------------------------------------------------------------------------
+# Classes that represent models
+#------------------------------------------------------------------------------
+
+# Event Log Model
 class EventLog(models.Model):
     name = models.CharField(max_length=50)
     number_of_traces = models.IntegerField(default=0)
@@ -15,6 +30,7 @@ class EventLog(models.Model):
     def __str__(self):
         return self.name
 
+# Running Case Model
 class RunningCase(models.Model):
     name = models.IntegerField()
     prefix = models.CharField(max_length=250)

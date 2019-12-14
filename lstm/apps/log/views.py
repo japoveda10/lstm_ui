@@ -1,3 +1,12 @@
+#------------------------------------------------------------------------------
+# LSTM UI Django Project
+# By japoveda10
+# views.py
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+# Imports
+#------------------------------------------------------------------------------
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from apps.log.forms import SelectLogForm
@@ -9,12 +18,18 @@ from .models import EventLog, RunningCase
 from apps.log.serializers import EventLogSerializer, RunningCaseSerializer
 import json
 
+#------------------------------------------------------------------------------
+# Input File
+#------------------------------------------------------------------------------
 json_data = open('./static/prefixes.json')   
 data1 = json.load(json_data) # deserialize
 data2 = json.dumps(data1)
 json_items = data1['collection']['items']
 json_data.close()
 
+#------------------------------------------------------------------------------
+# Classes
+#------------------------------------------------------------------------------
 def index(request):
     if request.GET.get('Execute All'):
         return render(request, 'log/results.html')
@@ -60,6 +75,11 @@ def get_data(request):
 
     return JsonResponse(data)
 
+#------------------------------------------------------------------------------
+# Classes that represent ViewSets
+#------------------------------------------------------------------------------
+
+# Event Log ViewSet
 class EventLogViewSet(viewsets.ModelViewSet):
     '''
     API endpoint that allows event logs to be viewed or edited
@@ -67,6 +87,7 @@ class EventLogViewSet(viewsets.ModelViewSet):
     queryset = EventLog.objects.all()
     serializer_class = EventLogSerializer
 
+# Running Case ViewSet
 class RunningCaseViewSet(viewsets.ModelViewSet):
     '''
     API endpoint that allows running cases to be viewed or edited

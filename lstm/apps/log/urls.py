@@ -1,14 +1,28 @@
+#------------------------------------------------------------------------------
+# LSTM UI Django Project
+# By japoveda10
+# urls.py
+# This file configures the app's urls
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+# Imports
+#------------------------------------------------------------------------------
 from django.urls import path, include
 from .views import index, about, contact_us, test, get_data
 from . import views
 from rest_framework import routers
 
+#------------------------------------------------------------------------------
+# Router
+#------------------------------------------------------------------------------
 router = routers.DefaultRouter()
 router.register('eventlogs', views.EventLogViewSet)
 router.register('runningcases', views.RunningCaseViewSet)
 
-# Wires up API using automatic URL routing
-# Login URLs are included for browsable API
+#------------------------------------------------------------------------------
+# URL Patterns
+#------------------------------------------------------------------------------
 urlpatterns = [
     path('', index, name='home'),
     path('about/', about, name='about'),
