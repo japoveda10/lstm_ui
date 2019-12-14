@@ -20,7 +20,7 @@ This project is built using a Python framework called [Django](https://www.djang
    $ git clone https://github.com/japoveda10/lstm_ui.git
    ```
    
-2. Request the ```settings.py``` file to japoveda10 and then add it to the /lstm_ui/lstm/lstm/ directory (where the urls.py and wsgi.py files are)
+2. Request the ```settings.py``` file to japoveda10 and then add it to the ```/lstm_ui/lstm/lstm/``` directory (where the urls.py and wsgi.py files are)
 
 3. Install [Python](https://www.python.org/downloads/)
 
