@@ -8,7 +8,7 @@ Welcome!
 
 This is the UI of [GenerativeLSTM](https://github.com/AdaptiveBProcess/GenerativeLSTM), an application that builds and uses generative models from event logs using LSTM neural networks. For more information about this project, click [here](https://link.springer.com/chapter/10.1007/978-3-030-26619-6_19).
 
-## How is it built?
+## How was it built?
 
 This project is built using a Python framework called [Django](https://www.djangoproject.com/). This project also uses [Chart.js](https://www.chartjs.org/) and [ProcessFlow](https://github.com/GabrielchenCN/ProcessFlow).
 
