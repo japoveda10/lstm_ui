@@ -10,7 +10,7 @@ This is the UI of [GenerativeLSTM](https://github.com/AdaptiveBProcess/Generativ
 
 ## How is it built?
 
-This project is built using a Python framework called [Django](https://www.djangoproject.com/). Django follows the **Model-Template-View** pattern. This project also uses [Chart.js](https://www.chartjs.org/) and [ProcessFlow](https://github.com/GabrielchenCN/ProcessFlow).
+This project is built using a Python framework called [Django](https://www.djangoproject.com/). This project also uses [Chart.js](https://www.chartjs.org/) and [ProcessFlow](https://github.com/GabrielchenCN/ProcessFlow).
 
 ## How can I run it?
 
@@ -20,7 +20,7 @@ This project is built using a Python framework called [Django](https://www.djang
    $ git clone https://github.com/japoveda10/lstm_ui.git
    ```
    
-2. Request the ```settings.py``` file to japoveda10 and then add it to the /lstm_ui/lstm/lstm/ directory
+2. Request the ```settings.py``` file to japoveda10 and then add it to the /lstm_ui/lstm/lstm/ directory (where the urls.py and wsgi.py files are)
 
 3. Install [Python](https://www.python.org/downloads/)
 
