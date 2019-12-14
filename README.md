@@ -1,16 +1,16 @@
 # LSTM Proposed Approach Django UI
 
-Welcome! This is the [LSTM Proposed Approach](https://link.springer.com/chapter/10.1007/978-3-030-26619-6_19) UI.
+Welcome!
 
 ![LSTM Proposed Approach Main Page](https://raw.githubusercontent.com/japoveda10/lstm_ui/master/lstm/IMAGE.png)
 
 ## What is it?
 
-This is the User Interface of [GenerativeLSTM](https://github.com/AdaptiveBProcess/GenerativeLSTM), an application that builds and uses generative models from event logs in XES format using LSTM neural networks.
+This is the UI of [GenerativeLSTM](https://github.com/AdaptiveBProcess/GenerativeLSTM), an application that builds and uses generative models from event logs using LSTM neural networks. For more information about this project, click [here](https://link.springer.com/chapter/10.1007/978-3-030-26619-6_19).
 
 ## How is it built?
 
-The UI is built using a Python framework called [Django](https://www.djangoproject.com/). This Python framework follows the **Model-Template-View** pattern. This project also uses [Chart.js](https://www.chartjs.org/) and [ProcessFlow](https://github.com/GabrielchenCN/ProcessFlow).
+This project is built using a Python framework called [Django](https://www.djangoproject.com/). Django follows the **Model-Template-View** pattern. This project also uses [Chart.js](https://www.chartjs.org/) and [ProcessFlow](https://github.com/GabrielchenCN/ProcessFlow).
 
 ## How can I run it?
 
@@ -21,7 +21,9 @@ The UI is built using a Python framework called [Django](https://www.djangoproje
    ```
    
 2. Request the ```settings.py``` file to japoveda10 and then add it to the /lstm_ui/lstm/lstm/ directory
+
 3. Install [Python](https://www.python.org/downloads/)
+
 4. Create a **virtual environment** to manage the project's dependencies. If you are using **Windows**, follow the instructions available [here](https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/). If you are using **macOS**, follow the instructions available [here](https://sourabhbajaj.com/mac-setup/Python/virtualenv.html). 
 
    **Important:** the virtual environment setup instructions for Windows and macOS were not written by us (we are linking you    to an external information source).
@@ -72,4 +74,4 @@ If you have questions or suggestions about this project, please contact [japoved
 
 ## Author
 
-By [japoveda10](https://github.com/japoveda10)
+[japoveda10](https://github.com/japoveda10)
